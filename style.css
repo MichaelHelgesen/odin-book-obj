@@ -1,0 +1,15 @@
+#library {
+    display: flex;
+    gap: 24px;
+}
+
+#library > div {
+    flex: auto;
+    background: lavender;
+    padding: 24px;
+}
+
+#library > div > div {
+    display: flex;
+    flex-direction: row;
+}
