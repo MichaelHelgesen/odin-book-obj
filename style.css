@@ -1,15 +1,23 @@
 #library {
     display: flex;
-    gap: 24px;
+    flex-flow: row wrap;
+    border-left: 10px solid brown;
+    border-top: 10px solid brown;
+    border-right: 10px solid brown;
+    background-color: brown;
 }
 
 #library > div {
     flex: auto;
+    display: flex;
+    flex-direction: column;
     background: lavender;
     padding: 24px;
+    max-width: 50px;
+    border-bottom: 10px solid brown;
 }
 
 #library > div > div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
