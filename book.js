@@ -35,8 +35,8 @@ function displayBooks(arr) {
     const divEl = document.createElement("div");
     const buttonElDel = document.createElement("button");
     const buttonElToggle = document.createElement("button");
-    buttonElDel.innerText = "Delete book";
-    buttonElToggle.innerText = "Toggle read";
+    buttonElDel.innerText = "Delete";
+    buttonElToggle.innerText = "Read";
     buttonElDel.addEventListener("click", function(e){
         myLibrary.forEach(function(libraryBook, index){
             if (book.id == libraryBook.id) {
@@ -53,28 +53,39 @@ function displayBooks(arr) {
         displayBooks(myLibrary);
     })
     divEl.setAttribute("book-id", book.id);
-    // const paragraphEl = document.createElement("p");
-    divEl.innerText = book.title;
-    divEl.innerText += book.author;
-    divEl.innerText += book.pages;
-    divEl.innerText += book.read;
-    divEl.appendChild(buttonElDel);
-    divEl.appendChild(buttonElToggle);
+    divEl.id = `${ book.read ? "read" : "notread" }`
+    const paragraphEl = document.createElement("p");
+    const paragraphEl2 = document.createElement("p");
+    const paragraphEl3 = document.createElement("p");
+    const buttonDiv = document.createElement("div");
+    buttonDiv.id = "buttonDiv";
+    const h2El = document.createElement("h2");
+    h2El.innerText = book.title
+    divEl.appendChild(h2El);
+    paragraphEl.innerText = book.author;
+    divEl.appendChild(paragraphEl);
+    paragraphEl2.innerText = `Pages: ${book.pages}`;
+    divEl.appendChild(paragraphEl2);
+    //paragraphEl3.innerText = book.read;
+    //divEl.appendChild(paragraphEl3);
+    buttonDiv.appendChild(buttonElDel);
+    buttonDiv.appendChild(buttonElToggle);
+    divEl.appendChild(buttonDiv);
     libraryDiv.appendChild(divEl);
   });
 }
-const test = new Book("test", "test", 3, false);
-const test2 = new Book("test2", "test", 3, false);
+const test = new Book("The Lord of The Rings", "JRR Tolkien", 3, false);
+const test2 = new Book("One Flew Over the Cuckoo's Nest", "Ken Kesey", 3, true);
 const test3 = new Book("test3", "test", 3, false);
 const test4 = new Book("test", "test", 3, false);
-const test5 = new Book("test2", "test", 3, false);
-const test6 = new Book("test3", "test", 3, false);
+const test5 = new Book("test2", "test", 3, true);
+const test6 = new Book("test3", "test", 3, true);
 const test7 = new Book("test", "test", 3, false);
 const test8 = new Book("test2", "test", 3, false);
-const test9 = new Book("test3", "test", 3, false);
+const test9 = new Book("test3", "test", 3, true);
 const test10 = new Book("test", "test", 3, false);
 const test11 = new Book("test2", "test", 3, false);
-const test12 = new Book("test3", "test", 3, false);
+const test12 = new Book("test3", "test", 3, true);
 addBookToLibrary(test);
 addBookToLibrary(test2);
 addBookToLibrary(test3);
