@@ -1,10 +1,12 @@
 #library {
-    display: flex;
-    flex-flow: row wrap;
-    border-left: 10px solid brown;
-    border-top: 10px solid brown;
-    border-right: 10px solid brown;
-    background-color: brown;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 200px);
+    border: 10px solid rgb(117, 34, 34);
+    
+    position: relative;
+    gap: 10px;
+    z-index: 2;
 }
 
 #library > div {
@@ -12,12 +14,37 @@
     display: flex;
     flex-direction: column;
     background: lavender;
+    place-self: center;
     padding: 24px;
-    max-width: 50px;
-    border-bottom: 10px solid brown;
+    height: 80px;
+    margin-top: 10px;
 }
 
 #library > div > div {
     display: flex;
     flex-direction: column;
+}
+
+#grid-overlay {
+    position: absolute;
+    width: calc(100% - 16px);
+    top: 10px;
+    left: 8px;
+    right: 8px;
+}
+
+#grid-overlay .bigrow {
+    height: 134px;
+    opacity: .5;
+}
+
+#grid-overlay .smallrow {
+    height: 10px;
+    background-color: brown;
+}
+
+#wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(111, 35, 35);
 }
