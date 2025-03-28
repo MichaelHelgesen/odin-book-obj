@@ -1,13 +1,102 @@
-html {
-    margin: 0 40px;
-}
-
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-end;
     margin: 0;
+}
+
+#cancel {
+    margin-top: 16px;
+}
+
+#dialogTrigger {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: brown; /* Green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+}
+
+#dialogTrigger:hover {
+  background-color: #8c2525; /* Darker green */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#dialogTrigger:active {
+  background-color: #6e2424; /* Even darker green */
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#feets {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#feets > div {
+    width: 50px;
+    background: rgb(117, 34, 34);
+    height: 30px;
+}
+
+form .input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+#grid-overlay {
+    position: absolute;
+    width: calc(100% - 16px);
+    top: 10px;
+    left: 8px;
+    right: 8px;
+}
+
+#grid-overlay .bigrow {
+    height: 154px;
+    opacity: .5;
+}
+
+#grid-overlay .smallrow {
+    height: 10px;
+    background-color: rgb(117, 34, 34);
+    position: relative;
+    box-shadow: 0 11px 15px 0px;
+    z-index: 10;
+}
+
+html {
+    margin: 0 40px;
+    background-image: url("./pattern.jpg");
+}
+
+input {
+    padding: 4px;
+}
+
+label[for="read"]  {
+    flex-direction: row;
 }
 
 #library {
@@ -45,93 +134,34 @@ body {
     margin: 0 -8px;
 }
 
-#notread {
-    background: #f8a8a8!important;
-}
-
 #library > div > div button {
     font-size: .55rem;
 }
 
-#grid-overlay {
-    position: absolute;
-    width: calc(100% - 16px);
-    top: 10px;
-    left: 8px;
-    right: 8px;
-}
-
-#grid-overlay .bigrow {
-    height: 154px;
-    opacity: .5;
-}
-
-#grid-overlay .smallrow {
-    height: 10px;
-    background-color: rgb(117, 34, 34);
-    position: relative;
-    box-shadow: 0 11px 15px 0px;
-    z-index: 10;
-}
-
-#wrapper {
-    position: relative;
-    overflow: hidden;
-    background-color: rgb(111, 35, 35);
-}
-
-#feets {
-    display: flex;
-    justify-content: space-between;
-}
-
-#feets > div {
-    width: 50px;
-    background: rgb(117, 34, 34);
-    height: 30px;
-}
-
-h2, p {
-    margin: 0;
-    font-size: .75em;
+#notread {
+    background: #f8a8a8!important;
 }
 
 p {
     margin: -1px 0;
 }
 
-h2 {
+#wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(111, 35, 35);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#wrapper h2, p {
+    margin: 0;
+    font-size: .75em;
+}
+
+#wrapper h2 {
     height: 200px;
     overflow: hidden;
     margin-bottom: 2px;
 }
-
-#dialogTrigger {
-    max-width: 400px;
-    margin: 0 auto;
-}
-#dialogTrigger {
-      padding: 15px 30px;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: brown; /* Green */
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 80px auto;
-    }
-
-    #dialogTrigger:hover {
-      background-color: #8c2525; /* Darker green */
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    #dialogTrigger:active {
-      background-color: #6e2424; /* Even darker green */
-      transform: translateY(0);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    }

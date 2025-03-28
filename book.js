@@ -122,5 +122,6 @@ registerTrigger.addEventListener("click", function (e) {
     document.getElementById("library").innerText = "";
     displayBooks(myLibrary);
     form.reset();
+    dialogElement.close();
   }
 });
